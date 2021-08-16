@@ -8,7 +8,7 @@ A website where I share my music-related works, and where people can reach out t
 
 # About/Background
 
- I have a relatively active [Musescore.com profile](https://musescore.com/thetalljerry) with a fair amount of followers, and for those of you not familiar with the site, it's essentially a place to share musical arrangements/compositions that are made with the music scripting software Musescore. Because of its _free_ nature, there's a pretty significant userbase. 
+ I have a relatively active [Musescore.com profile](https://musescore.com/thetalljerry) with a fair amount of followers. The site is essentially a place to share musical arrangements/compositions that are made with the music scripting software Musescore. Because of its _free_ nature, there's a pretty significant userbase. 
 
  A few months back I started receiving messages (from my potential/exsiting Musescore followers)
 * Asking what I've been working on
