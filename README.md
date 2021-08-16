@@ -35,7 +35,7 @@ A website where I share my music-related works, and where people can reach out t
 
  Having these in mind, I narrowed down to `Django`, a `Python` web framework with builtin admin interface, user authentication, testing environment, and many other useful modules. It's easily scalable, and works flawlessly with `SQL` databases. In addition, it has a strong and active community, and is supported by many hosting services. 
 
-## A full list of the techologies I used
+## Techologies I used
 *  `Python`, `Django`
 *  `HTML`, `CSS`, `Javascript`, `Bootstrap`
 *  `SQLite` and `PostgresSQL` (difference of use cases explained below)
@@ -45,12 +45,12 @@ A website where I share my music-related works, and where people can reach out t
 
 # Problems/Solutions
 
-## During development
+### During development
 
 *  **Problem**: While `Django` has a builtin form module, with creation and validation capabilities, I found my forms vulnerable to mass-creations (such as using  `requests.post`)
 *  **Solution**: I added a Google recaptcha (i.e. _I'm not a robot_) field to my forms and  _voila_, problem solved. 
 
-## During Production
+### During Production
 
  1.
 *  **Problem**: While `SQLite` *can* work during production and is in fact `Django`'s default file storage service, it's not recommended and unfortunatly Heroku doesn't support it. 
