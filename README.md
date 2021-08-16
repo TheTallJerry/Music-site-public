@@ -42,7 +42,7 @@ A website where I share my music-related works, and where people can reach out t
 * `SQLite` and `PostgresSQL` (difference of use cases explained below)
 * Heroku and AWS (usage of AWS explained below)
 
- I also recommend checking out `requirements.txt` for a full list of `Python` Modules used. It will also help you setting up a virtual environment if you prefer. 
+ In addition, I recommend checking out `requirements.txt` for a full list of `Python` Modules used. It will also help you setting up a virtual environment if you prefer. 
 
 # Problems and Solutions
 
