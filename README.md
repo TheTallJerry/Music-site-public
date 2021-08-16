@@ -21,12 +21,12 @@ A website where I share my music-related works, and where people can reach out t
 
  I made a summary of the features that I need to support and that I might need to support in the future
 
-## For myself
+### For myself
 *  Managing the contact requests - ideally through a database - such as closing and deleting. 
 *  Analyzing the contact requests such as filtering by day, title, whether it's about a completed or under-development work, etc
 *  Uploading my existing and under-development work with additional details as needed without having to rewrite the code (i.e. changes in an admin panel and reflected on the site in real time)
 *  Having registered users for future functionalities
-## For the website visitors
+### For the website visitors
 *  Being able to contact me in a rather simply manner (such as filling out a form)
 *  Being able to lookup the status of their contact request
 *  Being able to view my work/experiences
