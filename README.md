@@ -55,7 +55,7 @@ A website where I share my music-related works, and where people can reach out t
 
  1.
 * **Problem**: While `SQLite` *can* work during production and is in fact `Django`'s default file storage service, it's not recommended and unfortunatly Heroku doesn't support it. 
-* **Solution**: fortunately, `Django` provides a smooth transition between databases, so I installed the `PostgresSQL` Addon via Heroku, configured the database for `Django`, and problem solved. For this task specifically, I had to install `psycopg2`.
+* **Solution**: Fortunately, `Django` provides a smooth transition between databases, so I installed the `PostgresSQL` Add-on via Heroku, configured the database for `Django`, and problem solved. For this task specifically, I had to install `psycopg2`.
 
  2.
 * **Problem**: Heorku doesn't support user-uploaded media files' storage (i.e. no place to store admin's uploaded pictures)
