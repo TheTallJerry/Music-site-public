@@ -6,14 +6,6 @@
 
 ### https://zyjerryzhang-music-site.herokuapp.com/, might take a few seconds to load due to the limit of the free plan
 
-# Table of Contents
-
-* ## [About/Background](#About/Background)
-* ## [Design/Tech-stack](#Design/Tech-stack)
-* ## [Problems/Solutions](#Problems/Solutions)
-* ## [Source-code](#Source-code)
-* ## [Conclusion](#Conclusion)
-
 # About/Background
 
 ### I have a relatively active [Musescore.com profile](https://musescore.com/thetalljerry) with a fair amount of followers, and for those of you not familiar with the site, it's essentially a place to share musical arrangements/compositions that are made with the music scripting software Musescore. Because of its _free_ nature, there's a pretty significant userbase. 
