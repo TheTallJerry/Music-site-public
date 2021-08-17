@@ -46,27 +46,27 @@ A website where I share my music-related works, and where people can reach out t
 
 # Problems and Solutions
 
-### During development
+### During Development
 
-1. 
+**1.** 
 * **Problem**: While `Django` has a builtin form module, with creation and validation capabilities, I found my forms vulnerable to mass-creations (such as using  `requests.post`)
 * **Solution**: I added a Google recaptcha (i.e. _I'm not a robot_) field to my forms and  _voila_, problem solved. 
 
-2.
+**2.** 
 * **Problem**: I wanted to have on my site a selection of Musescore comments from my popular works. However, there isn't a functional API at the moment. 
 * **Solution**: I used Google Dev Tools to locate the request-response containing the info I needed, then mannually extracted it myself. **A downside to this** is if the response (in `json`) changes (such as changes in key names), my extraction might fail and could cause a server crash, hence for the time being I'm making this feature optional with a `try-except`. 
 
 ### During Production
 
- 1.
+**1.** 
 * **Problem**: While `SQLite` *can* work during production and is in fact `Django`'s default file storage service, it's not recommended and unfortunatly Heroku doesn't support it. 
 * **Solution**: Fortunately, `Django` provides a smooth transition between databases, so I installed the `PostgresSQL` Add-on via Heroku, configured the database for `Django`, and problem solved. For this task specifically, I had to install `psycopg2`.
 
- 2.
+**2.** 
 * **Problem**: Heorku doesn't support user-uploaded media files' storage (i.e. no place to store admin's uploaded pictures)
 * **Solution**: After some research I decided to use _AWS IAM and S3 buckets_ for this. They're relatively easy to use - although I did have some learning curve on the user/bucket policies - has a free tier, and many security configurations which I love, and problem solved. For this task specifically, I had to install `boto3.`
 
- 3.
+**3.** 
 * **Problem**: My localhost domain is different from my deployed domain, plus I might purchase a custom domain in the future. My navigation bar relies on relative links - which involves setting the `<base> HTML` element. Mannually changing them is too much work and I often ended up forgetting it. 
 * **Solution**: I used javascript to set `<base>` with `window.location.origin`, automating this process, and problem solved. 
 
