@@ -24,11 +24,11 @@ A website where I share my music-related works, and where people can reach out t
 ### For myself
 * Managing the contact requests - ideally through a database - such as closing and deleting. 
 * Analyzing the contact requests such as filtering by day, title, whether it's about a completed or under-development work, etc
-* Uploading my existing and under-development work with additional details as needed without having to rewrite the code (i.e. changes in an admin panel and reflected on the site in real time)
+* Uploading my existing and under-development work with additional details as needed without having to rewrite the code (i.e. changes in an admin panel are reflected on the site in real time)
 * Having registered users for future functionalities
 ### For the website visitors
-* Being able to contact me in a rather simply manner (such as filling out a form)
-* Being able to lookup the status of their contact request
+* Being able to contact me in a rather simple manner (such as filling out a form)
+* Being able to lookup the status of their contact request(s)
 * Being able to view my work/experiences
 
  For production, I wanted a beginner-friendly hosting service with a free tier, so I chose Heroku. 
