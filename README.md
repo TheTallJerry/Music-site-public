@@ -42,14 +42,19 @@ A website where I share my music-related works, and where people can reach out t
 * `SQLite` and `PostgresSQL` (difference of use cases explained below)
 * Heroku and AWS (usage of AWS explained below)
 
- This project uses `Python 3.9.4`. In addition, I recommend checking out `requirements.txt` for a full list of `Python` Modules used. It will also help you setting up a virtual environment if you prefer. 
+ This project uses `Python 3.9.4`. In addition, I recommend checking out `requirements.txt` for a full list of `Python` Modules used. It will also help you set up a virtual environment if you prefer. 
 
 # Problems and Solutions
 
 ### During development
 
+1. 
 * **Problem**: While `Django` has a builtin form module, with creation and validation capabilities, I found my forms vulnerable to mass-creations (such as using  `requests.post`)
 * **Solution**: I added a Google recaptcha (i.e. _I'm not a robot_) field to my forms and  _voila_, problem solved. 
+
+2.
+* **Problem**: I wanted to have on my site a selection of Musescore comments from my popular works. However, there isn't a functional API at the moment. 
+* **Solution**: I used Google Dev Tools to locate the request-response containing the info I needed, then mannually extracted it myself. **A downside to this** is if the response (in `json`) changes (such as changes in key names), my extraction might fail and could cause a server crash, hence for the time being I'm making this feature optional with a `try-except`. 
 
 ### During Production
 
