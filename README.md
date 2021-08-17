@@ -67,8 +67,8 @@ A website where I share my music-related works, and where people can reach out t
 * **Solution**: After some research I decided to use _AWS IAM and S3 buckets_ for this. They're relatively easy to use - although I did have some learning curve on the user/bucket policies - has a free tier, and many security configurations which I love, and problem solved. For this task specifically, I had to install `boto3.`
 
  3.
-* **Problem**: My localhost domain is different from my deployed domain, plus I might purchase a custom domain in the future. My navigation bar relies on relative links - which involves setting the `<base> HTML` element. Dynamically changing them is too much work and I often ended up forgetting it. 
-* **Solution**: I used javascript to set `<base>` with `window.location.origin`, and problem solved. 
+* **Problem**: My localhost domain is different from my deployed domain, plus I might purchase a custom domain in the future. My navigation bar relies on relative links - which involves setting the `<base> HTML` element. Mannually changing them is too much work and I often ended up forgetting it. 
+* **Solution**: I used javascript to set `<base>` with `window.location.origin`, automating this process, and problem solved. 
 
 # Source code
 
