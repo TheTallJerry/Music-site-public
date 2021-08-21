@@ -68,7 +68,13 @@ A website where I share my music-related works, and where people can reach out t
 
 **3.** 
 * **Problem**: My localhost domain is different from my deployed domain, plus I might purchase a custom domain in the future. My navigation bar relies on relative links - which involves setting the `<base> HTML` element. Mannually changing them is too much work and I often ended up forgetting it. 
-* **Solution**: I used javascript to set `<base>` with `window.location.origin`, automating this process, and problem solved. 
+* **Solution**: I used `Javascript` to set `<base>` with `window.location.origin`, automating this process, and problem solved. 
+
+### Alternate solution for some of the problems above? 
+
+The third problem during production:
+* **Alternate solution**: I could've written some code to do a DNS redirect to my IP address, then my program listens in on a specific port. 
+* **Reason for not doing this**: I believed changing the base element is of less work. Once there are more than two domains to run the site on, DNS redirect will involve more avoidable code, whereas I will never need to change the `Javascript` code and it'll always work. 
 
 # Source code
 
