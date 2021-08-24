@@ -25,7 +25,7 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 
 urlpatterns = [
     path('scores/', include('scores.urls')),
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('', home_view, name='firsr-view'),
     path('home/', home_view, name='home_view'),
     path("honorable_mentions/", honorablementions_view, name="honorablementions-view"),
