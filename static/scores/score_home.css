@@ -1,0 +1,66 @@
+.btn-primary{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.btn-secondary{
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+#intro-container{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+#score-home-intro{
+    line-height: 1.5;
+}
+
+#taste-dev-text{
+    line-height: 1.75;
+}
+
+#truth-text{
+    line-height: 1.75;
+}
+
+#mst-text{
+    line-height: 1.75;
+}
+
+
+#left-col{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-width: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+#right-col{
+    margin: auto;
+    margin-top: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+#listen-view{
+    background-color: aquamarine;
+}
+
+#design-process{
+    background-color: lemonchiffon;
+}
+#collapse-ble{
+    background-color: lemonchiffon;
+    color: black;
+    border: hidden;
+}
+#content-container{
+    background-color:  linen;
+}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
+
+<div class="container top-20 bottom-10" id="main-container">
+  <p>For the time being, this website is meant to serve as an addition to my musescore profile. Here's why you should use my website: </p>
+  <ul class="bottom-10">
+    <li class="bottom-10">I share my ongoing projects, insights into some of my exisiting scores, and some other stuff here :-) </li>
+    <li class="bottom-10">Reach out to me via the contact functionality, and search up the status of your contacts with a unique id</li>
+    <li class="bottom-10">The contact-me form also automatically sends me an email to a dedicated email address, making sure I can get back to you as soon as possible</li>
+    <li class="bottom-10">My musical development throughout these years - if you've got similar experince, maybe we can become friends! </li>
+  </ul>
+  <p>Start by exploring <b>the navigation bar </b>on top of the page! </p>
+  <p>* In the future I might modiy this into a portfolio site. </p>
+</div>
+{% if object %}
+  <div class="container top-20" id="message-container">
+    <h5><b><p>Latest message from Jerry:</p></b></h5>
+    <p>
+      <b>Subject:</b> {{object.subject}}
+    </p>  
+    <p>
+      {% if object.content %}
+        <b>Content:</b> {{object.content}}
+      {% endif %}
+    </p>   
+  </div>
+{% endif %}
+<div class="container" id="message-container">
+  {% if test %}
+    <p><b>Selected comment from Musescore</b></p>
+    <p><b>Score name: </b>{{test.0}}</p>
+    <p><b>OP's name: </b>{{test.1}}</p>
+    <p><b>Posted on: </b>{{test.2}}</p>
+    <p><b>Content: </b>{{test.3}}</p>
+  {% endif %}
+</div>
+
+{% endblock %}

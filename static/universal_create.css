@@ -1,0 +1,11 @@
+#form_disp{
+    margin: auto;
+    width: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+.textarea{
+    width: 50%;
+    position: relative;
+}

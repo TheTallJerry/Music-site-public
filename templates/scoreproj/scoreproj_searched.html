@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+<link rel="stylesheet" type="text/css" href="{% static 'scoreproj/scoreproj_searched.css' %}">
+<div class="container top-20" id="main-container">
+    <p><b>You chose to include: </b></p>
+    {% if included%}
+        <ul class="bottom-10">
+            {% for include in included%}
+                <li class="bottom-10">{{include}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>None</p>
+    {% endif %}
+
+    <p><b>You chose to exclude: </b></p>
+    {% if excluded %}
+    <ul class="bottom-10">
+        {% for exclude in excluded%}
+            <li class="bottom-10">{{exclude}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>None</p>
+    {% endif %}
+
+    {% if not object_list%}
+        <p>No results matched your preference, or no projects found in the database :(</p>
+    {% else %}
+        <p><b>Scores found: </b></p>
+        {% for scoreproj in object_list %}
+            <p>
+                {{ scoreproj.id}} - {{ scoreproj.composer }} - {{scoreproj.title}}
+            </p>
+            <p>
+                {{ scoreproj.description }}
+            </p>
+        {% endfor %}
+    {% endif %}
+</div>
+    
+{% endblock %}

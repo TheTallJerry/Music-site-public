@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'scoreproj/scoreproj_lookup.css' %}">
+<section>
+    <div class="container top-20 bottom-10" id="main-container">
+        <div class="row">
+            <div class="col">
+                <div class="container" id="intro-container">
+                    <p>I have many ongoing projects. You can search with specific criterias from below and if anything seems interesting to you, or if you got the inspiration of 
+                        working on something else, feel free to contact me with the name of the project.
+                    <p>
+                    <p>Here're some useful info: </p>
+                        <ul class="bottom-10">
+                            <li class="bottom-10"><b>Multi-select is enabled.</b> Hold Ctrl/Cmd for windows/mac to select more than one optoions</li>
+                            <p>
+                                For instance: if you'd like to find out projects that make use of woodwinds or piano but not drumset, simply select both of woodwinds and 
+                                piano from the top scrollpane, and drumset from the bottom scrollpane.
+                            </p>
+                            <li class="bottom-10"><b>To deselect a selected option</b>, press Ctrl/Cmd and click on it.</li>
+                          </ul>
+                </div> 
+            </div>
+            <form action="{% url 'scoreproj:scoreproj-searched-view'%}" method="POST"> {% csrf_token %}
+                <div class="col">
+                    <div class="form-group">
+                        <div class="container" id="select-container">
+                            <label id="instrumentation-txt">Include: </label>
+                            <select class="form-control bottom-10" name="instrumentation-include" multiple>
+                                <option value="brass" data-bs-toggle="tooltip" title="Trumpets, Trombone, Tuba, French Horn, Euphonium, etc">Brass</option>
+                                <option value="saxophone" data-bs-toggle="tooltip" title="Alto, Tenor, Bari, etc">Saxophone</option>
+                                <option value="woodwinds" data-bs-toggle="tooltip" title="Flute, Oboe, (bass) Clarinet, Bassoon, etc">Other Woodwinds</option>
+                                <option value="auxpercussion" data-bs-toggle="tooltip" title="Timpani, small percussions, bongo/conga, etc">Auxilary Percussion</option>
+                                <option value="drumset" data-bs-toggle="tooltip" title="any set from 1 pc to standard 4-7 pcs">Drum set</option>
+                                <option value="piano" data-bs-toggle="tooltip" title="Piano, synthesizers, keyboard percussion, etc">Keyboard</option>
+                            </select>
+                            <label class="top-20" id="instrumentation-txt">Exclude: </label>
+                            <select class="form-control" name="instrumentation-exclude" multiple>
+                                <option value="brass" data-bs-toggle="tooltip" title="Trumpets, Trombone, Tuba, French Horn, Euphonium, etc">Brass</option>
+                                <option value="saxophone" data-bs-toggle="tooltip" title="Alto, Tenor, Bari, etc">Saxophone</option>
+                                <option value="woodwinds" data-bs-toggle="tooltip" title="Flute, Oboe, (bass) Clarinet, Bassoon, etc">Other Woodwinds</option>
+                                <option value="auxpercussion" data-bs-toggle="tooltip" title="Timpani, small percussions, bongo/conga, etc">Auxilary Percussion</option>
+                                <option value="drumset" data-bs-toggle="tooltip" title="any set from 1 pc to standard 4-7 pcs">Drum set</option>
+                                <option value="piano" data-bs-toggle="tooltip" title="Piano, synthesizers, keyboard percussion, etc">Keyboard</option>
+                            </select>
+                        </div>
+                        <input type="submit" name="save/">
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

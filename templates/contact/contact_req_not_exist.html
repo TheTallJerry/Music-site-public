@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'contact/contact_req_not_exist.css'%}">
+<div class="container top-20" id="main-container">
+    <p>There's no request corresponding to the entered id. </p>
+</div>
+
+{% endblock %}

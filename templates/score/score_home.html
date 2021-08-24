@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'scores/score_home.css' %}">
+<div class="container top-20" id="intro-container">
+    <p id="score-home-intro">
+        I've been a faithful user of Musescore since 2017, and have created dozens of work with it. 
+        This page is meant to be used for:
+        <ul class="bottom-10">
+            <li class="bottom-10">Sharing some of my favorite/best works</li>
+            <li class="bottom-10">Discussing my design process</li>
+            <li class="bottom-10">Final thoughts and challenges I faced during designing</li>
+            <li class="bottom-10">My musical development throughout these years</li>
+          </ul>
+        which would be otherwise difficult to illustrate on the musescore website, whose primary functionality is sharing scores. 
+    </p>
+</div>
+<div class="container" id="content-container">
+    <div class="row">
+        <div class="col" id="left-col">
+            {% for object in object_list %}
+            <div class="card bottom-10" style="width: 25rem;">
+                {% if object.preview %}
+                    <img src="{{ object.preview.url }}" class="card-img-top">   
+                {% else %}
+                    <img src="{% static 'NoPreviewAvai.PNG' %}" class="card-img-top">
+                {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">{{ object.title }}</h5>
+                  <p class="card-text">{{ object.description }} <br> Started On: {{ object.startDate}}</p>
+                  <!--<p>&#9825; x likes	
+                    &#128065; y views</p>-->
+                  <div class="btn-group" role="group" aria-label="Basic example" >
+                    {% if object.publicUrl %}
+                        <button type="button" onclick="location.href='{{ object.publicUrl }}'" class="btn" aria-current="page" id="listen-view">Listen to/view the entire score</button>
+                    {% else %}
+                        <button type="button" class="btn" aria-current="page" id="listen-view">Score preview under construction</button>
+                    {% endif %}
+                    <button type="button" onclick="location.href='/scores/{{object.id}}'" class="btn" id="design-process">My design process for this score</button>
+                  </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col" class="right-col">
+            <div class="row">
+            </div>
+            <div class="row top-20 bottom-10">
+                <a class="btn btn-secondary" data-bs-toggle="collapse" href="#Collapse1" role="button" aria-expanded="open" aria-controls="Collapse1" id="collapse-ble">My musical development</a>
+                <div class="collapse show" id="Collapse1">
+                    <div class="card card-body text-center" id="taste-dev-text">
+                        <p>
+                            If you've been following my musescore account for a while (don't worry if you haven't), you might have noticed a rather significant change wrt
+                            the genres of music I've been working on, over time. I started with Jazz, focusing on the big band/swing style, then slowly leaning towards 
+                            concert band, focusing on the instrumentalization of pop and film music. Right now I'm into marching/military, as well as the 70s-80s jazz fusion, 
+                            concentrating in the Asian areas such as Japan. 
+                        </p>
+                        <p>
+                            Ever since I was introduced to music - this is years before 2017 - I've been an "instrumental over vocal" person. While I still have mandopop/j-pop/etc favorites
+                            such as Jay Chou and Jackie Chan (yes, he makes good music as well), pure instrumentation has always been my go-to choice. 
+                        </p>
+                        <p>
+                            No doubt that my taste is still evolving as I'm exposed to more musical styles, variants of exisiting styles, and technical knowledge, but as of now the above 
+                            is roughly what happened over these 5 years. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row top-20 bottom-10">
+                <a class="btn btn-secondary" data-bs-toggle="collapse" href="#Collapse2" role="button" aria-expanded="false" aria-controls="Collapse2" id="collapse-ble">About Truth by T-square</a>
+                <div class="collapse show" id="Collapse2">
+                    <div class="card card-body text-center" id="truth-text">
+                        T-Square is a japanese pop/fusion band that was once popular throughout the 60s - 80s. Read more under design process! 
+                    </div>
+                </div>
+            </div>
+            <div class="row top-20 bottom-10">
+                <a class="btn btn-secondary" data-bs-toggle="collapse" href="#Collapse3" role="button" aria-expanded="false" aria-controls="Collapse3" id="collapse-ble">About March of the Steel Torrent</a>
+                <div class="collapse show" id="Collapse3">
+                    <div class="card card-body text-center" id="mst-text">
+                        <p>
+                            Placeholder. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row top-20 bottom-10">
+                <a class="btn btn-secondary" role="button" id="collapse-ble">More content under construction...</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

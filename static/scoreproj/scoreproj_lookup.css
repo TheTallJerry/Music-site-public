@@ -1,0 +1,18 @@
+#select-container{
+    font-family: 'Times New Roman', Times, serif;
+    width: 50%;
+    font-size: larger;
+}
+
+#intro-container{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+.p{
+    text-align: justify;
+}
+
+input[type="submit"]{
+    background-color: lightgreen;
+}

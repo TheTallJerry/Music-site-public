@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'contact/contact_home.css' %}">
+
+<div class="container top-20" id="contact-container">
+    <p>You can: </p>
+    <ul class="bottom-10">
+        <li class="bottom-10">send me a message by pressing the "contact me" button below</li>
+        <li class="bottom-10">Check out the status of your past contacts with the unique id given to you</li>
+    </ul>
+    <p>For the sake of easiness of organization, the "contact me" form will be the only way to reach out to me for timely response. </p>
+    <button type="button" class="btn btn-success btn-md bottom-10 " onclick="location.href='contact/request'">contact me</button>
+
+    <form class="d-flex" method="POST" action="{% url 'contact:contact-request-searched-view' %}">{% csrf_token %}
+        <input class="form-control me-2" type="search" placeholder="Search by id" aria-label="Search" name="search">
+        <button class="btn btn-success" type="submit">Search</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'scores/score_details.css' %}">
+{% block content%}
+<div class="container top-20">
+    <h2 id="title">{{object.title}}</h2>
+    <p>{% if description %} 
+        {{ description }}
+        {% else %}
+        <P>Oops, haven't written any description yet, but hang in there, they'll come :-)</P>
+        {% endif %}
+    </p>
+    {% if object.designProcess %}
+        <div class="container" id="design">{{object.designProcess|safe}}</div>
+    {% else %}
+    <p>Oops, haven't written any design processes yet, but hang in there, they'll come :-)</p>
+    {% endif %}
+</div>
+    
+{% endblock %}

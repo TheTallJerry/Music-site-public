@@ -1,0 +1,18 @@
+<!--Takes in form as parameter and renders out this form-->
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content%}
+    {% block instructions %}
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'universal_create.css' %}">
+    <div id="form_disp">
+        <form method="POST"> {% csrf_token %}
+            {{ form|crispy }}
+
+            <input class= "btn-success" type="submit" value = "Save"/>
+            
+        </form>
+    </div>
+    
+{% endblock %}

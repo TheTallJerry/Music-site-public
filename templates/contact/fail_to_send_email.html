@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'contact/contact_req_disp.css'%}">
+<div class="container top-20" id="main-container">
+    <h3>Hi {{name}}</h3>
+    <p>You're seeing this because an attempt to send an email to your 
+        provided account at {{email}} has failed. Please double check if you've entered the correct email address, or retry with another email account. 
+    </p>
+</div>
+{% endblock %}

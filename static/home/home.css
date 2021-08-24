@@ -1,0 +1,14 @@
+.container{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+  }
+
+  #main-container{
+    width: auto;
+  }
+
+  #message-container{
+    width: auto;
+    border: 2px rgb(154, 230, 201) solid;
+
+  }

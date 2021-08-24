@@ -2,10 +2,20 @@
 
 A website where I share my music-related works, and where people can reach out to me
 
-# Link
+# Public Link
 
  https://zyjerryzhang-music-site.herokuapp.com/, might take a few seconds to load due to the limit of the free plan
 
+
+# Running Locally
+
+A simplified version of the source code has been uploaded, excluding my data and tests, where the latter is currently being optimized. 
+
+To run locally
+1. You'll need at least `Python 3.9.4` accessible via command line - if you have a higher version that's fine too - I haven't tried with lower versions, so those may or may not work. It is also recommended to have `pip` installed. 
+2. `requirements.txt` specifies all the `Python` modules used in this project. If you aren't using a virtualenv, run `pip install -r requirements.txt` if you have pip to install all the modules. Other downloading services will have similar commands. 
+3. Now moving inside the project. You need to configure a series of settings in `testsite/settings.py`, specifically anything noted with `TODO`. Examples of this include an email account and password used for sending emails in the contact request, as well as google recaptcha public and secret keys. Leaving the email credentials as null will affect sending emails, and leaving recaptcha as null will prevent the recaptcha from displaying; however, the site will still run normally. To experience the full functionalities, add your own values. 
+4. Now simply run `python manage.py migrate --run-syncdb` then `python manage.py runserver`. The link to your local server will be displayed in the terminal. To create an admin, run `python manage.py createsuperuser`, then enter your desired credentials. 
 # About/Background
 
  I have a relatively active [Musescore.com profile](https://musescore.com/thetalljerry) with a fair amount of followers. The site is essentially a place to share musical arrangements/compositions that are made with the music scripting software Musescore. Because of its _free_ nature, there's a pretty significant userbase. 
@@ -75,10 +85,6 @@ A website where I share my music-related works, and where people can reach out t
 The third problem during production:
 * **Alternate solution**: I could've written some code to do a DNS redirect to my IP address, then my program listens in on a specific port. 
 * **Reason for not doing this**: I believed changing the base element is of less work. Once there are more than two domains to run the site on, DNS redirect will involve more avoidable code, whereas I will never need to change the `Javascript` code and it'll always work. 
-
-# Source code
-
- I will be releasing portions of source code under this repostitory as I finalize each component. For now, please reach out to me if you'd like to view the source code. 
 
 # Conclusion
 

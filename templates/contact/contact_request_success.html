@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'contact/contact_req_disp.css'%}">
+<div class="container top-20" id="main-container">
+    <h3>Hi {{name}}</h3>
+    <p>Your request has been sent successfully. I'll try to get back to you within 2 business days.</p>
+    <p>An email with your request's specifics has been sent to your provided email address.</p>
+    <p>You can checkout the status of your request using your unique id: {{id}}</p>
+    <h3>Best, Jerry</h3>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'honorablementions.css' %}">
+<div class="container top-20 bottom-10" id="main-container">
+    <h4>Honorable Mentions of some resources I used: </h4>
+    <!--Add list-->
+    <ul class="bottom-10">
+        <li class="bottom-10">This site is developed using Python Django and launched via Heroku</li>
+        <li class="bottom-10">I write all of my design processes in google docs, then download them as html and render them out</li>
+    </ul>
+</div>
+
+{% endblock %}
