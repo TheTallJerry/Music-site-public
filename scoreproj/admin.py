@@ -4,7 +4,7 @@ from .models import ScoreProject
 
 class ScoreProjectAdmin(admin.ModelAdmin):
     fieldsets = [
-        ("Instrumentation", {"fields": ["brass", "saxophone", "woodwinds", "auxPercussion", "drumset", "piano"]}), 
+        ("Instrumentation", {"fields": ["brass", "saxophone", "woodwinds", "auxpercussion", "drumset", "piano"]}), 
         ("Title of the project", {"fields": ["title"]}), 
         ("Main composer (if any) of the music", {"fields": ["composer"]}),
         ("Description (if any) of the project", {"fields": ["description"]}),
